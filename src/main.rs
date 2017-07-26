@@ -1,15 +1,15 @@
-extern crate rand;
-
-use std::io;
-use rand::Rng;
 
 
 fn main() {
-    let mut guess = String::new();
-    io::stdin().read_line(&mut guess).expect("Failed to read from standard input");
+    another_function(true);
 
-    let secret_number = rand::thread_rng().gen_range(1, 101);
+}
 
-    println!("You guessed: {}", guess);
-
+fn another_function(x: bool) -> i32{
+    let number = if x {
+        5
+    } else {
+        6
+    };
+    return number;
 }
